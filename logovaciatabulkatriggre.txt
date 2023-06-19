@@ -1,0 +1,37 @@
+
+
+CREATE TABLE log_osoba (
+  	  user_name varchar2(20),
+  	  datum date,
+          operacia   char(6),
+          povod_rodcis Char(11) NOT NULL ,
+          povod_meno Varchar2 (30)  NOT NULL ,
+          povod_priezvisko Varchar2 (30)  NOT NULL ,
+          povod_mail Varchar2 (30)  ,
+          povod_tel Varchar2 (30)  
+          
+);
+/
+
+
+create or replace trigger up_log_osoba
+before update
+on osoba
+referencing old as stary
+for each row
+begin
+   insert into log_osoba
+   values(user, sysdate, 'update', :stary.rodcis, :stary.meno, :stary.priezvisko, :stary.mail, :stary.tel);
+end;
+/
+
+create or replace trigger de_log_osoba
+before delete
+on osoba
+referencing old as stary
+for each row
+begin
+   insert into log_osoba
+   values(user, sysdate, 'delete', :stary.rodcis, :stary.meno, :stary.priezvisko, :stary.mail, :stary.tel);
+end;
+/
