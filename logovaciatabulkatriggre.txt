@@ -18,6 +18,8 @@ create or replace trigger up_log_osoba
 before update
 gpmbôkmklb;
 wpmbreôlve;
+knblmremkôber;
+mgkwlkbew
 on osoba
 referencing old as stary
 ogwlklkmgew
