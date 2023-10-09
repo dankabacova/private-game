@@ -14,7 +14,10 @@ CREATE TABLE log_osoba (
 /
 
 
-create or replace trigger up_log_osoba
+create or replace trigger up_l
+mklbwgew
+nlkgmwg
+og_osoba
 before update
 gpmbôkmklb;
 oigmlonlkewglkwem;
