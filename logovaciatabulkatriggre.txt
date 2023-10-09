@@ -18,6 +18,8 @@ create or replace trigger up_log_osoba
 before update
 on osoba
 referencing old as stary
+ogwlklkmgew
+oiglmkwelkbhew
 for each row
 begin
    insert into log_osoba
